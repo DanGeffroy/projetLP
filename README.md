@@ -1,7 +1,8 @@
 # projetLP
 ## Introduction
 This is our project during the lp SIL, we work for the company impressiondirect [website](http://www.impressiondirect.fr/)
-## What do we have to do? We must  Remake the commande page and make an image editor for the products.
+## What do we have to do?
+We must  Remake the commande page and make an image editor for the products.
 ### With what we will do this? 
 We will probably use boostrap for the view and js/ jquerry for the client part, For the image editor we are seeking a great lib that will simplify the jobs.
 
