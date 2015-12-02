@@ -2,7 +2,7 @@
 <html lang="en" ng-app="kitchensink">
 <head>
   <meta charset="utf-8">
-  <title>Kitchensink | Fabric.js Demos</title>
+  <title>ImpressionDirect</title>
   <link rel="stylesheet" href="css/master.css">
   <link rel="stylesheet" href="css/prism.css">
   <style>pre{margin-left:15px!important}</style>
@@ -13,6 +13,9 @@
   <script src="js/prism.js"></script>
   <script src="js/fabric.js"></script>
   <script src="js/angular.min.js"></script>
+  <script src="js/ext.js"></script>
+
+  <!-- 1er bloc --> 
   <script type='text/javascript'>//<![CDATA[
 
     function draw(ev) {
@@ -30,13 +33,14 @@
       }
     }
 
-    document.getElementById("uploadimage").addEventListener("change", draw, false)
+    document.getElementById("uploadimage").addEventListener("change", draw, false);
     //]]>
-
     </script>
+
   </head>
   <body bgcolor="black">
-  <script>
+  <!-- 2 eme bloc -->
+<script>
   var imageLoader = document.getElementById('imageLoader');
   imageLoader.addEventListener('change', handleImage, false);
 
@@ -76,6 +80,8 @@ t.parentNode.insertBefore(s, t);
 }
 */})();
 </script>
+
+<!-- 3 eme bloc  -->
 <script type='text/javascript'>
 
 function handleImage(e){
@@ -95,6 +101,7 @@ canvas.add(imageLoader);
 });
 
 </script>
+
 <div id="bd-wrapper" ng-controller="CanvasControls">
   <!--[if IE]><script src="../lib/fonts/Delicious.font.js"></script><![endif]-->
   <script src="js/jquery.js"></script>
@@ -426,9 +433,6 @@ canvas.add(imageLoader);
               <button id="shadowify" class="btn btn-object-action" ng-click="shadowify()">
                 Shadowify
               </button>
-              <button id="patternify" class="btn btn-object-action" ng-click="patternify()">
-                Patternify
-              </button>
               <button id="clip" class="btn btn-object-action" ng-click="clip()">
                 Clip
               </button>
@@ -466,15 +470,18 @@ canvas.add(imageLoader);
       </div>
 
 
-      <script>
+	<script>
       var kitchensink = { };
       var canvas = new fabric.Canvas('canvas');
       </script>
+
       <script src="js/utils.js"></script>
       <script src="js/app_config.js"></script>
       <script src="js/controller.js"></script>
     </div>
-    <script>
+
+<!-- 4 eme bloc   -->
+   <script>
     (function(){
       var mainScriptEl = document.getElementById('main');
       if (!mainScriptEl) return;
@@ -502,6 +509,8 @@ canvas.add(imageLoader);
       });
     })();
     </script>
+
+<!-- 5eme bloc -->
     <script>
     document.getElementById('imgLoader').onchange = function handleImage(e) {
       var reader = new FileReader();
