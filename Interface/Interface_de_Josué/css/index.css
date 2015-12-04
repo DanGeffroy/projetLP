@@ -1,0 +1,308 @@
+/*
+notre partie avance bien nous avons mis en place la libreri 
+et nous Avon déjà quelque chose de fonctionnel (inspiration 
+pioché dans un exemple d'éditeur d'image proche des besoins du client). 
+Il nous reste encore a mieux comprendre la lib, et peronaliser l'exemple
+ pour qu'il correspond exactement au besoin du client
+
+*/
+body{
+    min-width: 80%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Copperplate Gothic Light';
+    font-style: normal;
+    font-variant: small-caps;
+}
+header{
+    text-align: center;
+	width: 100%;
+    height: 78pt;
+    padding: 0pt; 
+    z-index: 999;
+    background: linear-gradient(bottom, #eeeeee 0%, #ffffff 100%); 
+    background: -moz-linear-gradient(bottom, #eeeeee 0%, #ffffff 100%); 
+    background: -webkit-linear-gradient(bottom, #eeeeee 0%,#ffffff 100%); 
+    box-shadow: 0pt 0pt 3pt rgba(0,0,0,0.9);
+}
+nav{
+    text-align: center;
+    clear: both;
+}
+nav ul{
+    padding: 0pt 0pt;
+    list-style: none;
+    position: relative;
+    display: inline-table;
+    text-align: center;
+    margin: 0pt;
+}
+nav ul:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+nav ul li{
+    float: left;
+}
+nav ul li:hover > ul{
+    display: block;
+}
+nav ul li .a:hover {
+    color: #222222;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+    box-shadow: inset 0pt 0pt 50pt 0pt rgba(230,230,230,0.9);
+}
+nav ul li .a{
+
+    font-family: 'Copperplate Gothic Light';
+    font-style: normal;
+    font-variant: small-caps;
+    display: block;
+    padding: 5pt 10pt;
+    margin: 0pt 5pt;
+    color: #888888;
+    text-decoration: none;
+    background: linear-gradient(bottom, #eeeeee 0%, #dddddd 100%); 
+    background: -moz-linear-gradient(bottom, #eeeeee 0%, #dddddd 100%); 
+    background: -webkit-linear-gradient(bottom, #eeeeee 0%,#dddddd 100%); 
+    border-style: none;
+    box-shadow: 0pt 0pt 2pt 0pt rgba(0,0,0,0.9);
+    border-radius: 8pt 8pt 0pt 0pt;
+}
+nav ul ul{
+    display: none;
+    background: linear-gradient(bottom, #eeeeee 0%, #dddddd 100%); 
+    background: -moz-linear-gradient(bottom, #eeeeee 0%, #dddddd 100%); 
+    background: -webkit-linear-gradient(bottom, #eeeeee 0%,#dddddd 100%); 
+    position: absolute; 
+    box-shadow: 0pt 0pt 2pt 0pt rgba(0,0,0,0.9);
+    top: 105%;
+}
+nav ul li ul li {
+    float: none; 
+    position: relative;
+}
+nav ul li ul li .a {
+    font-family: copperplate gothic light;
+    font-size: 10pt;
+    padding: 5pt 10pt;
+    margin: 0pt 0pt;
+    color: #888888;
+    float: left;
+    background: transparent;;
+    box-shadow: 0pt 0pt 0pt 0pt rgba(0,0,0,0.9);
+    border-radius: 0pt;
+}
+nav ul li ul li .a:hover {
+    box-shadow: inset 0pt 0pt 50pt 0pt rgba(200,200,200,0.9);
+    border-radius: 0pt;
+}
+#logoIP{
+	float: left;
+    width: 20%;
+    margin-top: 10pt;
+    text-decoration: none;
+    background: transparent;
+    border-radius: 5pt;
+    -o-border-radius: 5pt;
+    -ms-border-radius: 5pt;
+    -moz-border-radius: 5pt;
+    -webkit-border-radius: 5pt;
+    /*position: fixed;*/
+}
+#logoIP img{
+    width: 110pt;
+    vertical-align: middle;
+}
+#slogan{
+    width: 100%;
+    /*position: fixed;*/
+    margin-top: 20pt;
+}
+#slogan a{
+	font-size: 15pt;
+    margin: 0pt;
+    color: #888888;
+    float: right;
+    text-decoration: none;
+}
+#bar{
+	margin-top: 1pt;
+	text-align: center;
+	height: 15pt;
+    background: linear-gradient(bottom, #eeeeee 0%, #dddddd 100%); 
+    background: -moz-linear-gradient(bottom, #eeeeee 0%, #dddddd 100%); 
+    background: -webkit-linear-gradient(bottom, #eeeeee 0%,#dddddd 100%); 
+    box-shadow: 0pt 0pt 2pt 0pt rgba(0,0,0,0.9);
+}
+#bar div{
+	margin: auto;	
+	width: 80%;
+}
+#bar div #eC{
+	float: left;
+}
+#bar div #vP{
+	float: right;
+}
+#bar div a{
+    color: #888888;
+    text-decoration: none;
+    border-style: none;	
+}
+#bar div a:hover{
+    border-style: none;	
+    color: #222222;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+    box-shadow: inset 0pt 0pt 50pt 0pt rgba(230,230,230,0.9);
+}
+a{
+	text-decoration: none;
+}
+#content{
+	display: block;
+	text-align: center;
+	margin-top: 10pt;
+	height: 100%;
+}
+#gauche{ 
+	border-radius: 5pt 5pt 0pt 0pt;
+    box-shadow: 0pt 0pt 2pt 0pt rgba(0,0,0,0.9);
+	margin: 0pt;
+	display: inline-table;
+	width: 22%;
+	height: 350pt;
+	border: 0pt;
+}
+#accordion ul{
+	padding: 0pt;
+    list-style: none;
+    text-align: center;
+    margin: 0pt;
+}
+#accordion ul li{
+    margin: 0pt;
+}
+#accordion ul li a{
+	font-size: 10pt;
+    padding: 0pt 5pt;
+    margin: 0pt;
+    color: #888888;
+    text-decoration: none;
+    border-style: none;
+}
+#accordion ul li a:hover{
+    color: #222222;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -ms-transition: all 0.2s ease-in-out 0s;
+    -o-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+    box-shadow: inset 0pt 0pt 50pt 0pt rgba(210,210,210,0.9);
+}
+
+#centre{
+	border: 0pt;
+	margin: 0pt 10pt;
+	width: 50%;
+	height: 100%;
+	display: inline-table;
+	height: 100%;
+}
+#droite{
+	border-radius: 5pt 5pt 0pt 0pt;
+    box-shadow: 0pt 0pt 2pt 0pt rgba(0,0,0,0.9);
+	border: 0pt;
+	margin: 0pt;
+	display: inline-table;
+	width: 22%;
+	height: 100%;
+}
+h2{
+	background: -webkit-gradient(linear, left top, left bottom, from(#9ECEF3), to(#083D65));
+	color: #ffffff;
+	border-radius: 5pt 5pt 0pt 0pt;
+    box-shadow: 0pt 0pt 2pt 0pt rgba(0,0,0,0.9);
+	margin: 0pt;
+	width: 100%;
+	font-size: 18pt;
+}
+h3{
+	background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+	color: #555555;
+    box-shadow: 0pt 0pt 2pt 0pt rgba(0,0,0,0.9);
+	margin: 0pt;
+	font-size: 12pt;
+}
+h3:hover{
+	color: #888888;
+    box-shadow: inset 0pt 0pt 10pt 5pt rgba(210,210,210,0.9);
+	margin: 0pt;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -ms-transition: all 0.2s ease-in-out 0s;
+    -o-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+}
+.title{
+	background: -webkit-gradient(linear, left top, left bottom, from(#f8be7b), to(#c47d2e));
+	border-radius: 5pt;
+    box-shadow: 0pt 0pt 2pt 0pt rgba(0,0,0,0.9);
+	margin: 0pt;
+	width: 100%;
+	color: #ffffff;
+	font-size: 18pt;
+}
+.title:hover{
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -ms-transition: all 0.2s ease-in-out 0s;
+    -o-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+	color: #cccccc;
+	font-size: 18pt;
+	opacity: 0.8;
+    box-shadow: inset 0pt 0pt 1pt 1pt rgba(210,210,210,0.9);
+}
+
+
+
+
+.cont{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    zoom: 1;
+}
+.cont:before, .cont:after{
+    content: '.';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+}
+.cont:after{
+    clear: both;
+}
