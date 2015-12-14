@@ -15,92 +15,11 @@
   <script src="js/angular.min.js"></script>
   <script src="js/ext.js"></script>
 
-  <!-- 1er bloc --> 
-  <script type='text/javascript'>//<![CDATA[
-
-    function draw(ev) {
-      console.log(ev);
-      var ctx = document.getElementById('canvas').getContext('2d'),
-      img = new Image(),
-      f = document.getElementById("uploadimage").files[0],
-      url = window.URL || window.webkitURL,
-      src = url.createObjectURL(f);
-
-      img.src = src;
-      img.onload = function() {
-        ctx.drawImage(img, 0, 0);
-        url.revokeObjectURL(src);
-      }
-    }
-
-    document.getElementById("uploadimage").addEventListener("change", draw, false);
-    //]]>
-    </script>
-
   </head>
   <body bgcolor="black">
-  <!-- 2 eme bloc -->
-<script>
-  var imageLoader = document.getElementById('imageLoader');
-  imageLoader.addEventListener('change', handleImage, false);
 
-  function handleImage(e) {
-    var reader = new FileReader();
-    reader.onload = function (event) {
-      var img = new Image();
-      img.onload = function () {
-        var imgInstance = new fabric.Image(img, {
-          scaleX: 0.2,
-          scaleY: 0.2
-        })
-        canvas.add(imgInstance);
-      }
-      img.src = event.target.result;
-    }
-    reader.readAsDataURL(e.target.files[0]);
-  }
-  </script>
-  <script>
-  (function() {
-    /*
-    if (document.location.hostname === 'localhost') {
-    var links = document.getElementById('header').getElementsByTagName('a');
-    for (var i = 0, len = links.length; i < len; i++) {
-    // very retarted fix but fuck it
-    links[i].href = links[i].href.replace('fabricjs.com', 'localhost:4000');
-  }
-}
-else {
-var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-s.async = true;
-s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-t.parentNode.insertBefore(s, t);
 
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-}
-*/})();
-</script>
 
-<!-- 3 eme bloc  -->
-<script type='text/javascript'>
-
-function handleImage(e){
-  var reader = new FileReader();
-  reader.onload = function(event){
-    var img = new Image();
-    img.onload = function(){
-      canvas.width = img.width;
-      canvas.height = img.height;
-      ctx.drawImage(img,0,0);
-    }
-    img.src = event.target.result;
-  }
-  reader.readAsDataURL(e.target.files[0]);
-}
-canvas.add(imageLoader);
-});
-
-</script>
 
 <div id="bd-wrapper" ng-controller="CanvasControls">
   <!--[if IE]><script src="../lib/fonts/Delicious.font.js"></script><![endif]-->
@@ -109,6 +28,7 @@ canvas.add(imageLoader);
   <script src="js/paster.js"></script>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/kitchensink.css">
+  <link rel="stylesheet" href="css/index.css">
   <link href='http://fonts.googleapis.com/css?family=Plaster' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Engagement' rel='stylesheet' type='text/css'>
   <div style="position:relative;width:420px;float:left;" id="canvas-wrapper">
@@ -200,141 +120,31 @@ canvas.add(imageLoader);
       <li><a href="kitchensink2.htm#object-controls-pane" data-toggle="tab">Controls</a></li>
     </ul>
     <div class="tab-content">
-      <div class="tab-pane" id="svg-shapes">
-        <p>Add <strong>SVG shapes</strong> to canvas:</p>
-        <ul class="svg-shapes">
-          <li><button class="btn btn-small shape" id="shape25"><strong>36</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape36"><strong>41</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape58"><strong>54</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape59"><strong>57</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape8"><strong>65</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape151">Lighthouse (<strong>78</strong> paths)</button></li>
-          <li><button class="btn btn-small shape" id="shape17"><strong>87</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape2"><strong>90</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape69">HTML5 logo (<strong>96</strong> paths)</button></li>
-          <li><button class="btn btn-small shape" id="shape115"><strong>124</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape47"><strong>133</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape51"><strong>141</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape141"><strong>244</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape109"><strong>153</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape146"><strong>160</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape50"><strong>167</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape99"><strong>174</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape142"><strong>180</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape112"><strong>183</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape132"><strong>191</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape63"><strong>202</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape133"><strong>223</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape64"><strong>224</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape14"><strong>226</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape108"><strong>236</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape62"><strong>237</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape139"><strong>239</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape140"><strong>246</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape113"><strong>278</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape145"><strong>264</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape98"><strong>280</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape144"><strong>308</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape57"><strong>321</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape128"><strong>341</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape123"><strong>359</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape90"><strong>363</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape120"><strong>395</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape138"><strong>401</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape9"><strong>404</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape45"><strong>404</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape65"><strong>444</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape1"><strong>448</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape93"><strong>464</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape131"><strong>476</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape122"><strong>513</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape91"><strong>562</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape38"><strong>563</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape119"><strong>600</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape135"><strong>651</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape96"><strong>674</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape125"><strong>676</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape126"><strong>696</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape94"><strong>710</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape129"><strong>756</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape121"><strong>756</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape37"><strong>758</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape10"><strong>778</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape101"><strong>832</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape134"><strong>834</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape143"><strong>838</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape147"><strong>841</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape102"><strong>850</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape43"><strong>936</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape136"><strong>975</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape110"><strong>1004</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape7"><strong>1018</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape95"><strong>1066</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape97"><strong>1126</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape118"><strong>1173</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape116"><strong>1196</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape3"><strong>1197</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape26"><strong>1215</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape114"><strong>1269</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape77"><strong>1424</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape32"><strong>1515</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape13"><strong>1652</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape130"><strong>1800</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape71"><strong>1868</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape76"><strong>1944</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape53"><strong>1948</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape21"><strong>1972</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape5"><strong>2208</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape40"><strong>2394</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape55"><strong>2499</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape4"><strong>2742</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape29"><strong>3103</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape30"><strong>3566</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape61"><strong>3685</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape6"><strong>3921</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape23"><strong>4418</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape42"><strong>4583</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape31"><strong>4768</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape15"><strong>8325</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape22"><strong>9663</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape41"><strong>12361</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape67"><strong>12604</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape24"><strong>12866</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape27"><strong>13905</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape49"><strong>14174</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape33"><strong>17059</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape20"><strong>19035</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape35"><strong>19271</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape44"><strong>22375</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape72"><strong>29303</strong> paths</button></li>
-          <li><button class="btn btn-small shape" id="shape48"><strong>41787</strong> paths</button></li>
-
-
-
-
-        </ul>
-      </div>
       <div class="tab-pane active" id="simple-shapes">
         <p>Add <strong>simple shapes</strong> to canvas:</p>
         <p>
-          <button type="button" class="btn rect" ng-click="addRect()">Rectangle</button>
-          <button type="button" class="btn circle" ng-click="addCircle()">Circle</button>
-          <button type="button" class="btn triangle" ng-click="addTriangle()">Triangle</button>
-          <button type="button" class="btn line" ng-click="addLine()">Line</button>
-          <button type="button" class="btn polygon" ng-click="addPolygon()">Polygon</button>
+          <button type="button" class="btn btn-primary rect" ng-click="addRect()">Rectangle</button>
+          <button type="button" class="btn btn-primary circle" ng-click="addCircle()">Circle</button>
+          <button type="button" class="btn btn-primary triangle" ng-click="addTriangle()">Triangle</button>
+          <button type="button" class="btn btn-primary line" ng-click="addLine()">Line</button>
+          <button type="button" class="btn btn-primary polygon" ng-click="addPolygon()">Polygon</button>
         </p>
-        
-            <br><b>Add Image or map:</b><br>
-            <br><input type="file" id="imgLoader">
-            <a href="http://127.0.0.1:4001/ic/diagram/addcustommap.html" target="_blank"><i>How do I add a custom map?</i></a>
-          </p>
+
+            <b>Add Image or map:</b>
+            <span class="btn btn-default btn-file">
+                Browse <input type="file" id="imgLoader">
+            </span>
           <p><b>Text/Label:</b><br>
-            <button class="btn" ng-click="addText()">Add text</button>
+            <button class="btn btn-primary" ng-click="addText()">Add text</button>
             <br><b>Controls/Export:</b><br>
-            <button class="btn btn-object-action" id="remove-selected" ng-click="removeSelected()">
+            <button class="btn btn-primary btn-object-action" id="remove-selected" ng-click="removeSelected()">
               Remove selected object/group
             </button><br>
-            <button id="send-backwards" class="btn btn-object-action" ng-click="sendBackwards()">Send backwards</button><button id="send-to-back" class="btn btn-object-action" ng-click="sendToBack()">Send to back</button><br><button id="bring-forward" class="btn btn-object-action" ng-click="bringForward()">Bring forwards</button><button id="bring-to-front" class="btn btn-object-action" ng-click="bringToFront()">Bring to front</button>
+            <button id="send-backwards" class="btn btn-primary btn-object-action" ng-click="sendBackwards()">Send backwards</button>
+            <button id="send-to-back" class="btn btn-primary btn-object-action" ng-click="sendToBack()">Send to back</button>
+            <br>
+            <button id="bring-forward" class="btn btn-primary btn-object-action" ng-click="bringForward()">Bring forwards</button>
+            <button id="bring-to-front" class="btn btn-primary btn-object-action" ng-click="bringToFront()">Bring to front</button>
           </p>
           Export canvas as:
           <button class="btn btn-success" id="rasterize" ng-click="rasterize()">
@@ -362,27 +172,27 @@ canvas.add(imageLoader);
           <div class="object-controls" object-buttons-enabled="getSelected()">
             <div style="margin-top:10px;">
               <p>
-                <button class="btn btn-object-action" id="remove-selected" ng-click="removeSelected()">
+                <button class="btn btn-primary btn-object-action" id="remove-selected" ng-click="removeSelected()">
                   Remove selected object/group
                 </button>
               </p>
-              <button class="btn btn-lock btn-object-action" ng-click="setHorizontalLock(!getHorizontalLock())" ng-class="{'btn-inverse': getHorizontalLock()}">
+              <button class="btn btn-primary btn-lock btn-object-action" ng-click="setHorizontalLock(!getHorizontalLock())" ng-class="{'btn-inverse': getHorizontalLock()}">
                 {[ getHorizontalLock() ? 'Unlock horizontal movement' : 'Lock horizontal movement' ]}
               </button>
               <br>
-              <button class="btn btn-lock btn-object-action" ng-click="setVerticalLock(!getVerticalLock())" ng-class="{'btn-inverse': getVerticalLock()}">
+              <button class="btn btn-primary btn-lock btn-object-action" ng-click="setVerticalLock(!getVerticalLock())" ng-class="{'btn-inverse': getVerticalLock()}">
                 {[ getVerticalLock() ? 'Unlock vertical movement' : 'Lock vertical movement' ]}
               </button>
               <br>
-              <button class="btn btn-lock btn-object-action" ng-click="setScaleLockX(!getScaleLockX())" ng-class="{'btn-inverse': getScaleLockX()}">
+              <button class="btn btn-primary btn-lock btn-object-action" ng-click="setScaleLockX(!getScaleLockX())" ng-class="{'btn-inverse': getScaleLockX()}">
                 {[ getScaleLockX() ? 'Unlock horizontal scaling' : 'Lock horizontal scaling' ]}
               </button>
               <br>
-              <button class="btn btn-lock btn-object-action" ng-click="setScaleLockY(!getScaleLockY())" ng-class="{'btn-inverse': getScaleLockY()}">
+              <button class="btn btn-primary btn-lock btn-object-action" ng-click="setScaleLockY(!getScaleLockY())" ng-class="{'btn-inverse': getScaleLockY()}">
                 {[ getScaleLockY() ? 'Unlock vertical scaling' : 'Lock vertical scaling' ]}
               </button>
               <br>
-              <button class="btn btn-lock btn-object-action" ng-click="setRotationLock(!getRotationLock())" ng-class="{'btn-inverse': getRotationLock()}">
+              <button class="btn btn-primary btn-lock btn-object-action" ng-click="setRotationLock(!getRotationLock())" ng-class="{'btn-inverse': getRotationLock()}">
                 {[ getRotationLock() ? 'Unlock rotation' : 'Lock rotation' ]}
               </button>
             </div>
@@ -419,21 +229,21 @@ canvas.add(imageLoader);
               </p>
             </div>
             <div style="margin-top:10px;">
-              <button id="send-backwards" class="btn btn-object-action" ng-click="sendBackwards()">Send backwards</button>
-              <button id="send-to-back" class="btn btn-object-action" ng-click="sendToBack()">Send to back</button>
+              <button id="send-backwards" class="btn btn-primary btn-object-action" ng-click="sendBackwards()">Send backwards</button>
+              <button id="send-to-back" class="btn btn-primary btn-object-action" ng-click="sendToBack()">Send to back</button>
             </div>
             <div style="margin-top:4px;">
-              <button id="bring-forward" class="btn btn-object-action" ng-click="bringForward()">Bring forwards</button>
-              <button id="bring-to-front" class="btn btn-object-action" ng-click="bringToFront()">Bring to front</button>
+              <button id="bring-forward" class="btn btn-primary btn-object-action" ng-click="bringForward()">Bring forwards</button>
+              <button id="bring-to-front" class="btn btn-primary btn-object-action" ng-click="bringToFront()">Bring to front</button>
             </div>
             <div style="margin-top:10px;">
-              <button id="gradientify" class="btn btn-object-action" ng-click="gradientify()">
+              <button id="gradientify" class="btn btn-primary btn-object-action" ng-click="gradientify()">
                 Gradientify
               </button>
-              <button id="shadowify" class="btn btn-object-action" ng-click="shadowify()">
+              <button id="shadowify" class="btn btn-primary btn-object-action" ng-click="shadowify()">
                 Shadowify
               </button>
-              <button id="clip" class="btn btn-object-action" ng-click="clip()">
+              <button id="clip" class="btn btn-primary btn-object-action" ng-click="clip()">
                 Clip
               </button>
             </div>
@@ -479,64 +289,33 @@ canvas.add(imageLoader);
       <script src="js/app_config.js"></script>
       <script src="js/controller.js"></script>
     </div>
+    <!-- 5eme bloc -->
+        <script>
+        document.getElementById('imgLoader').onchange = function handleImage(e) {
+          var reader = new FileReader();
+          reader.onload = function (event) { console.log('fdsf');
+          var imgObj = new Image();
+          imgObj.src = event.target.result;
+          imgObj.onload = function () {
+            // start fabricJS stuff
 
-<!-- 4 eme bloc   -->
-   <script>
-    (function(){
-      var mainScriptEl = document.getElementById('main');
-      if (!mainScriptEl) return;
-      var preEl = document.createElement('pre');
-      var codeEl = document.createElement('code');
-      codeEl.innerHTML = mainScriptEl.innerHTML;
-      codeEl.className = 'language-javascript';
-      preEl.appendChild(codeEl);
-      document.getElementById('bd-wrapper').appendChild(preEl);
-    })();
-    </script>
-    <script>
-    (function() {
-      fabric.util.addListener(fabric.window, 'load', function() {
-        var canvas = this.__canvas || this.canvas,
-        canvases = this.__canvases || this.canvases;
+            var image = new fabric.Image(imgObj);
+            image.set({
+              left: 250,
+              top: 250,
+              angle: 0,
+              padding: 10,
+              cornersize: 10
+            });
+            //image.scale(getRandomNum(0.1, 0.25)).setCoords();
+            canvas.add(image);
 
-        canvas && canvas.calcOffset && canvas.calcOffset();
-
-        if (canvases && canvases.length) {
-          for (var i = 0, len = canvases.length; i < len; i++) {
-            canvases[i].calcOffset();
+            // end fabricJS stuff
           }
+
         }
-      });
-    })();
-    </script>
-
-<!-- 5eme bloc -->
-    <script>
-    document.getElementById('imgLoader').onchange = function handleImage(e) {
-      var reader = new FileReader();
-      reader.onload = function (event) { console.log('fdsf');
-      var imgObj = new Image();
-      imgObj.src = event.target.result;
-      imgObj.onload = function () {
-        // start fabricJS stuff
-
-        var image = new fabric.Image(imgObj);
-        image.set({
-          left: 250,
-          top: 250,
-          angle: 20,
-          padding: 10,
-          cornersize: 10
-        });
-        //image.scale(getRandomNum(0.1, 0.25)).setCoords();
-        canvas.add(image);
-
-        // end fabricJS stuff
+        reader.readAsDataURL(e.target.files[0]);
       }
-
-    }
-    reader.readAsDataURL(e.target.files[0]);
-  }
-  </script>
+      </script>
 </body>
 </html>
