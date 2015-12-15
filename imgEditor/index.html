@@ -43,6 +43,7 @@
       <li class="active"><a href="kitchensink2.htm#simple-shapes" data-toggle="tab">Elements</a></li>
       <li><a href="kitchensink2.htm#object-controls-pane" data-toggle="tab">Controls</a></li>
     </ul>
+  </br>
     <div class="tab-content">
       <div class="tab-pane active" id="simple-shapes">
         <p>Add <strong>simple shapes</strong> to canvas:</p>
@@ -93,11 +94,6 @@
           </div>
           <div class="object-controls" object-buttons-enabled="getSelected()">
             <div style="margin-top:10px;">
-              <p>
-                <button class="btn btn-primary btn-object-action" id="remove-selected" ng-click="removeSelected()">
-                  Remove selected object/group
-                </button>
-              </p>
               <button class="btn btn-primary btn-lock btn-object-action" ng-click="setHorizontalLock(!getHorizontalLock())" ng-class="{'btn-inverse': getHorizontalLock()}">
                 {[ getHorizontalLock() ? 'Unlock horizontal movement' : 'Lock horizontal movement' ]}
               </button>
