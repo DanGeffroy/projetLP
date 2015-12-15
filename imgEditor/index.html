@@ -37,79 +37,6 @@
     </div>
     <output id="list"></output>
     <canvas id="canvas" width="417.5" height="562.5"></canvas>
-    <div id="color-opacity-controls" ng-show="canvas.getActiveObject()">
-      <label for="opacity">Opacity: </label>
-      <input value="100" type="range" bind-value-to="opacity">
-      <label for="color" style="margin-left:10px">Color: </label>
-      <input type="color" style="width:40px" bind-value-to="fill">
-    </div>
-    <div id="text-wrapper" style="margin-top: 10px" ng-show="getText()">
-      <textarea bind-value-to="text" style="width: 420px; height: 62px;"></textarea>
-      <div id="text-controls">
-        <label for="font-family" style="display:inline-block">Font family:</label>
-        <select id="font-family" class="btn-object-action" bind-value-to="fontFamily">
-          <option value="arial">Arial</option>
-          <option value="helvetica" selected>Helvetica</option>
-          <option value="myriad pro">Myriad Pro</option>
-          <option value="delicious">Delicious</option>
-          <option value="verdana">Verdana</option>
-          <option value="georgia">Georgia</option>
-          <option value="courier">Courier</option>
-          <option value="comic sans ms">Comic Sans MS</option>
-          <option value="impact">Impact</option>
-          <option value="monaco">Monaco</option>
-          <option value="optima">Optima</option>
-          <option value="hoefler text">Hoefler Text</option>
-          <option value="plaster">Plaster</option>
-          <option value="engagement">Engagement</option>
-        </select>
-        <br>
-        <label for="text-align" style="display:inline-block">Text align:</label>
-        <select id="text-align" class="btn-object-action" bind-value-to="textAlign">
-          <option><span class="glyphicon glyphicon-align-left"></span>Left</option>
-          <option><span class="glyphicon glyphicon-align-center"></span>Center</option>
-          <option><span class="glyphicon glyphicon-align-right"></span>Right</option>
-          <option><span class="glyphicon glyphicon-align-justify"></span>Justify</option>
-        </select>
-        <div>
-          <label for="text-bg-color">Background color:</label>
-          <input type="color" value="" id="text-bg-color" size="10" class="btn-object-action" bind-value-to="bgColor">
-        </div>
-        <div>
-          <label for="text-lines-bg-color">Background text color:</label>
-          <input type="color" value="" id="text-lines-bg-color" size="10" class="btn-object-action" bind-value-to="textBgColor">
-        </div>
-        <div>
-          <label for="text-stroke-color">Stroke color:</label>
-          <input type="color" value="" id="text-stroke-color" class="btn-object-action" bind-value-to="strokeColor">
-        </div>
-        <div>
-          <label for="text-font-size">Font size:</label>
-          <input type="range" value="" min="1" max="120" step="1" id="text-font-size" class="btn-object-action" bind-value-to="fontSize">
-        </div>
-        <div>
-          <label for="text-line-height">Line height:</label>
-          <input type="range" value="" min="0" max="10" step="0.1" id="text-line-height" class="btn-object-action" bind-value-to="lineHeight">
-        </div>
-      </div>
-      <div id="text-controls-additional">
-        <button type="button" class="btn btn-object-action" ng-click="toggleBold()" ng-class="{'btn-inverse': isBold()}">
-          Bold
-        </button>
-        <button type="button" class="btn btn-object-action" id="text-cmd-italic" ng-click="toggleItalic()" ng-class="{'btn-inverse': isItalic()}">
-          Italic
-        </button>
-        <button type="button" class="btn btn-object-action" id="text-cmd-underline" ng-click="toggleUnderline()" ng-class="{'btn-inverse': isUnderline()}">
-          Underline
-        </button>
-        <button type="button" class="btn btn-object-action" id="text-cmd-linethrough" ng-click="toggleLinethrough()" ng-class="{'btn-inverse': isLinethrough()}">
-          Linethrough
-        </button>
-        <button type="button" class="btn btn-object-action" id="text-cmd-overline" ng-click="toggleOverline()" ng-class="{'btn-inverse': isOverline()}">
-          Overline
-        </button>
-      </div>
-    </div>
   </div>
   <div id="commands" ng-click="maybeLoadShape($event)">
     <ul class="nav nav-tabs">
@@ -266,7 +193,79 @@
         </div>
       </div>
 
-
+      <div id="color-opacity-controls" ng-show="canvas.getActiveObject()">
+        <label for="opacity">Opacity: </label>
+        <input value="100" type="range" bind-value-to="opacity">
+        <label for="color" style="margin-left:10px">Color: </label>
+        <input type="color" style="width:40px" bind-value-to="fill">
+      </div>
+      <div id="text-wrapper" style="margin-top: 10px" ng-show="getText()">
+        <textarea bind-value-to="text" style="width: 420px; height: 62px;"></textarea>
+        <div id="text-controls">
+          <label for="font-family" style="display:inline-block">Font family:</label>
+          <select id="font-family" class="btn-object-action" bind-value-to="fontFamily">
+            <option value="arial">Arial</option>
+            <option value="helvetica" selected>Helvetica</option>
+            <option value="myriad pro">Myriad Pro</option>
+            <option value="delicious">Delicious</option>
+            <option value="verdana">Verdana</option>
+            <option value="georgia">Georgia</option>
+            <option value="courier">Courier</option>
+            <option value="comic sans ms">Comic Sans MS</option>
+            <option value="impact">Impact</option>
+            <option value="monaco">Monaco</option>
+            <option value="optima">Optima</option>
+            <option value="hoefler text">Hoefler Text</option>
+            <option value="plaster">Plaster</option>
+            <option value="engagement">Engagement</option>
+          </select>
+          <br>
+          <label for="text-align" style="display:inline-block">Text align:</label>
+          <select id="text-align" class="btn-object-action" bind-value-to="textAlign">
+            <option><span class="glyphicon glyphicon-align-left"></span>Left</option>
+            <option><span class="glyphicon glyphicon-align-center"></span>Center</option>
+            <option><span class="glyphicon glyphicon-align-right"></span>Right</option>
+            <option><span class="glyphicon glyphicon-align-justify"></span>Justify</option>
+          </select>
+          <div>
+            <label for="text-bg-color">Background color:</label>
+            <input type="color" value="" id="text-bg-color" size="10" class="btn-object-action" bind-value-to="bgColor">
+          </div>
+          <div>
+            <label for="text-lines-bg-color">Background text color:</label>
+            <input type="color" value="" id="text-lines-bg-color" size="10" class="btn-object-action" bind-value-to="textBgColor">
+          </div>
+          <div>
+            <label for="text-stroke-color">Stroke color:</label>
+            <input type="color" value="" id="text-stroke-color" class="btn-object-action" bind-value-to="strokeColor">
+          </div>
+          <div>
+            <label for="text-font-size">Font size:</label>
+            <input type="range" value="" min="1" max="120" step="1" id="text-font-size" class="btn-object-action" bind-value-to="fontSize">
+          </div>
+          <div>
+            <label for="text-line-height">Line height:</label>
+            <input type="range" value="" min="0" max="10" step="0.1" id="text-line-height" class="btn-object-action" bind-value-to="lineHeight">
+          </div>
+        </div>
+        <div id="text-controls-additional">
+          <button type="button" class="btn btn-object-action" ng-click="toggleBold()" ng-class="{'btn-inverse': isBold()}">
+            Bold
+          </button>
+          <button type="button" class="btn btn-object-action" id="text-cmd-italic" ng-click="toggleItalic()" ng-class="{'btn-inverse': isItalic()}">
+            Italic
+          </button>
+          <button type="button" class="btn btn-object-action" id="text-cmd-underline" ng-click="toggleUnderline()" ng-class="{'btn-inverse': isUnderline()}">
+            Underline
+          </button>
+          <button type="button" class="btn btn-object-action" id="text-cmd-linethrough" ng-click="toggleLinethrough()" ng-class="{'btn-inverse': isLinethrough()}">
+            Linethrough
+          </button>
+          <button type="button" class="btn btn-object-action" id="text-cmd-overline" ng-click="toggleOverline()" ng-class="{'btn-inverse': isOverline()}">
+            Overline
+          </button>
+        </div>
+      </div>
 	<script>
       var kitchensink = { };
       var canvas = new fabric.Canvas('canvas');
@@ -288,10 +287,10 @@
 
             var image = new fabric.Image(imgObj);
             image.set({
-              left: 250,
-              top: 250,
+              left: 0,
+              top: 0,
               angle: 0,
-              padding: 10,
+              padding: 0,
               cornersize: 10
             });
             //image.scale(getRandomNum(0.1, 0.25)).setCoords();
