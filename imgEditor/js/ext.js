@@ -56,7 +56,7 @@ canvas.add(imageLoader);
 });
 
 // 4 eme bloc
-(function(){
+function(){
       var mainScriptEl = document.getElementById('main');
       if (!mainScriptEl) return;
       var preEl = document.createElement('pre');

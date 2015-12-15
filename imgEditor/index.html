@@ -25,8 +25,9 @@
   <!--[if IE]><script src="../lib/fonts/Delicious.font.js"></script><![endif]-->
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
-  <script src="js/paster.js"></script>
   <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/paster.js"></script>
+
   <link rel="stylesheet" href="css/kitchensink.css">
   <link rel="stylesheet" href="css/index.css">
   <link href='http://fonts.googleapis.com/css?family=Plaster' rel='stylesheet' type='text/css'>
@@ -43,7 +44,7 @@
       <input type="color" style="width:40px" bind-value-to="fill">
     </div>
     <div id="text-wrapper" style="margin-top: 10px" ng-show="getText()">
-      <textarea bind-value-to="text"></textarea>
+      <textarea bind-value-to="text" style="width: 420px; height: 62px;"></textarea>
       <div id="text-controls">
         <label for="font-family" style="display:inline-block">Font family:</label>
         <select id="font-family" class="btn-object-action" bind-value-to="fontFamily">
@@ -65,10 +66,10 @@
         <br>
         <label for="text-align" style="display:inline-block">Text align:</label>
         <select id="text-align" class="btn-object-action" bind-value-to="textAlign">
-          <option>Left</option>
-          <option>Center</option>
-          <option>Right</option>
-          <option>Justify</option>
+          <option><span class="glyphicon glyphicon-align-left"></span>Left</option>
+          <option><span class="glyphicon glyphicon-align-center"></span>Center</option>
+          <option><span class="glyphicon glyphicon-align-right"></span>Right</option>
+          <option><span class="glyphicon glyphicon-align-justify"></span>Justify</option>
         </select>
         <div>
           <label for="text-bg-color">Background color:</label>
@@ -81,10 +82,6 @@
         <div>
           <label for="text-stroke-color">Stroke color:</label>
           <input type="color" value="" id="text-stroke-color" class="btn-object-action" bind-value-to="strokeColor">
-        </div>
-        <div>
-          <label for="text-stroke-width">Stroke width:</label>
-          <input type="range" value="1" min="1" max="5" id="text-stroke-width" class="btn-object-action" bind-value-to="strokeWidth">
         </div>
         <div>
           <label for="text-font-size">Font size:</label>
@@ -130,25 +127,23 @@
           <button type="button" class="btn btn-primary polygon" ng-click="addPolygon()">Polygon</button>
         </p>
 
-            <b>Add Image or map:</b>
+            <b>Add Image :</b>
             <span class="btn btn-default btn-file">
-                Browse <input type="file" id="imgLoader">
+                Browse <span class="glyphicon glyphicon-folder-open"></span><input type="file" id="imgLoader">
             </span>
           <p><b>Text/Label:</b><br>
-            <button class="btn btn-primary" ng-click="addText()">Add text</button>
+            <button class="btn btn-primary" ng-click="addText()"><span class="glyphicon glyphicon-font"></span> Text
+            </button>
             <br><b>Controls/Export:</b><br>
-            <button class="btn btn-primary btn-object-action" id="remove-selected" ng-click="removeSelected()">
-              Remove selected object/group
+            <button class="btn btn-danger btn-object-action" id="remove-selected" ng-click="removeSelected()"><span class=" glyphicon glyphicon-trash"></span> Remove object/group
             </button><br>
-            <button id="send-backwards" class="btn btn-primary btn-object-action" ng-click="sendBackwards()">Send backwards</button>
-            <button id="send-to-back" class="btn btn-primary btn-object-action" ng-click="sendToBack()">Send to back</button>
-            <br>
-            <button id="bring-forward" class="btn btn-primary btn-object-action" ng-click="bringForward()">Bring forwards</button>
-            <button id="bring-to-front" class="btn btn-primary btn-object-action" ng-click="bringToFront()">Bring to front</button>
+             <button id="send-backwards" class="btn btn-primary btn-object-action" ng-click="sendBackwards()"><span class="glyphicon glyphicon-menu-down"></span> Send backwards</button>
+            <button id="send-to-back" class="btn btn-primary btn-object-action" ng-click="sendToBack()"><span class="glyphicon glyphicon-triangle-bottom"></span> Send to back</button>
+         </br>
+         <button id="bring-forward" class="btn btn-primary btn-object-action" ng-click="bringForward()"><span class="glyphicon glyphicon-menu-up"></span> Bring forwards</button>
+        <button id="bring-to-front" class="btn btn-primary btn-object-action" ng-click="bringToFront()"><span class="glyphicon glyphicon-triangle-top"></span> Bring to front</button>
           </p>
-          Export canvas as:
-          <button class="btn btn-success" id="rasterize" ng-click="rasterize()">
-            Image
+          <button class="btn btn-success" id="rasterize" ng-click="rasterize()"><span class="glyphicon glyphicon-ok"></span> Done
           </button>
         </div>
         <div class="tab-pane" id="object-controls-pane">
@@ -227,14 +222,6 @@
                   <input type="radio" name="origin-y" class="origin-y btn-object-action" value="bottom" bind-value-to="originY">
                 </label>
               </p>
-            </div>
-            <div style="margin-top:10px;">
-              <button id="send-backwards" class="btn btn-primary btn-object-action" ng-click="sendBackwards()">Send backwards</button>
-              <button id="send-to-back" class="btn btn-primary btn-object-action" ng-click="sendToBack()">Send to back</button>
-            </div>
-            <div style="margin-top:4px;">
-              <button id="bring-forward" class="btn btn-primary btn-object-action" ng-click="bringForward()">Bring forwards</button>
-              <button id="bring-to-front" class="btn btn-primary btn-object-action" ng-click="bringToFront()">Bring to front</button>
             </div>
             <div style="margin-top:10px;">
               <button id="gradientify" class="btn btn-primary btn-object-action" ng-click="gradientify()">
