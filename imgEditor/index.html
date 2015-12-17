@@ -195,15 +195,15 @@
       <div class="col-sm-4">
       <div id="color-opacity-controls" ng-show="canvas.getActiveObject()">
         <label for="opacity">Opacity: </label>
-        <input value="100" type="range" bind-value-to="opacity">
+        <input value="100" type="range" class="barre" bind-value-to="opacity">
         <label for="color" style="margin-left:10px">Color: </label>
-        <input type="color" style="width:40px" bind-value-to="fill">
+        <input type="color" style="width:40px" class="btn btn-primary barre " bind-value-to="fill">
       </div>
       <div id="text-wrapper" style="margin-top: 10px" ng-show="getText()">
         <textarea bind-value-to="text" style="width: 220px; height: 62px;"></textarea>
         <div id="text-controls">
           <label for="font-family" style="display:inline-block">Font family:</label>
-          <select id="font-family" class="btn-object-action" bind-value-to="fontFamily">
+          <select id="font-family" class="btn btn-primary btn-object-action" bind-value-to="fontFamily">
             <option value="arial">Arial</option>
             <option value="helvetica" selected>Helvetica</option>
             <option value="myriad pro">Myriad Pro</option>
@@ -221,7 +221,7 @@
           </select>
           <br>
           <label for="text-align" style="display:inline-block">Text align:</label>
-          <select id="text-align" class="btn-object-action" bind-value-to="textAlign">
+          <select id="text-align" class="btn btn-primary btn-object-action" bind-value-to="textAlign">
             <option><span class="glyphicon glyphicon-align-left"></span>Left</option>
             <option><span class="glyphicon glyphicon-align-center"></span>Center</option>
             <option><span class="glyphicon glyphicon-align-right"></span>Right</option>
@@ -229,39 +229,39 @@
           </select>
           <div>
             <label for="text-bg-color">Background color:</label>
-            <input type="color" value="" id="text-bg-color" size="10" class="btn-object-action" bind-value-to="bgColor">
+            <input type="color" value="" id="text-bg-color" size="10" class="btn btn-primary barre barre btn-object-action" bind-value-to="bgColor">
           </div>
           <div>
             <label for="text-lines-bg-color">Background text color:</label>
-            <input type="color" value="" id="text-lines-bg-color" size="10" class="btn-object-action" bind-value-to="textBgColor">
+            <input type="color" value="" id="text-lines-bg-color" size="10" class="btn btn-primary barre btn-object-action" bind-value-to="textBgColor">
           </div>
           <div>
             <label for="text-stroke-color">Stroke color:</label>
-            <input type="color" value="" id="text-stroke-color" class="btn-object-action" bind-value-to="strokeColor">
+            <input type="color" value="" id="text-stroke-color" class="btn btn-primary barre btn-object-action" bind-value-to="strokeColor">
           </div>
           <div>
             <label for="text-font-size">Font size:</label>
-            <input type="range" value="" min="1" max="120" step="1" id="text-font-size" class="btn-object-action" bind-value-to="fontSize">
+            <input type="range" value="" min="1" max="120" step="1" id="text-font-size" class="btn barre btn-object-action" bind-value-to="fontSize">
           </div>
           <div>
             <label for="text-line-height">Line height:</label>
-            <input type="range" value="" min="0" max="10" step="0.1" id="text-line-height" class="btn-object-action" bind-value-to="lineHeight">
+            <input type="range" value="" min="0" max="10" step="0.1" id="text-line-height" class="btn barre btn-object-action" bind-value-to="lineHeight">
           </div>
         </div>
         <div id="text-controls-additional">
-          <button type="button" class="btn btn-object-action" ng-click="toggleBold()" ng-class="{'btn-inverse': isBold()}">
+          <button type="button" class="btn btn-primary  btn-object-action" ng-click="toggleBold()" ng-class="{'btn-inverse': isBold()}">
             Bold
           </button>
-          <button type="button" class="btn btn-object-action" id="text-cmd-italic" ng-click="toggleItalic()" ng-class="{'btn-inverse': isItalic()}">
+          <button type="button" class="btn btn-primary  btn-object-action" id="text-cmd-italic" ng-click="toggleItalic()" ng-class="{'btn-inverse': isItalic()}">
             Italic
           </button>
-          <button type="button" class="btn btn-object-action" id="text-cmd-underline" ng-click="toggleUnderline()" ng-class="{'btn-inverse': isUnderline()}">
+          <button type="button" class="btn btn-primary  btn-object-action" id="text-cmd-underline" ng-click="toggleUnderline()" ng-class="{'btn-inverse': isUnderline()}">
             Underline
           </button>
-          <button type="button" class="btn btn-object-action" id="text-cmd-linethrough" ng-click="toggleLinethrough()" ng-class="{'btn-inverse': isLinethrough()}">
+          <button type="button" class="btn btn-primary  btn-object-action" id="text-cmd-linethrough" ng-click="toggleLinethrough()" ng-class="{'btn-inverse': isLinethrough()}">
             Linethrough
           </button>
-          <button type="button" class="btn btn-object-action" id="text-cmd-overline" ng-click="toggleOverline()" ng-class="{'btn-inverse': isOverline()}">
+          <button type="button" class="btn btn-primary  btn-object-action" id="text-cmd-overline" ng-click="toggleOverline()" ng-class="{'btn-inverse': isOverline()}">
             Overline
           </button>
         </div>

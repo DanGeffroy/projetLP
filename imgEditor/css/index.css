@@ -27,3 +27,39 @@
     vertical-align: top;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+.btn-primary {
+  color: #fff;
+  background-color: #286090;
+  border-color: #173854;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+  color: #fff;
+  background-color: #173854;
+  border-color: #173854;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #173854;
+  border-color: #173854;
+}
+.barre{
+  padding:0px;
+  background-color: white;
+  border-width: 0px;
+}
+.barre:focus,
+.barre:target,
+.barre:hover{
+  padding:0px;
+  background-color: white;
+  border-width: 0px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    padding: 0px 0px !important;
+}
