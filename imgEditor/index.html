@@ -19,9 +19,10 @@
   <body bgcolor="black">
 
 
-
-
 <div id="bd-wrapper" ng-controller="CanvasControls">
+
+
+  <div class="row">
   <!--[if IE]><script src="../lib/fonts/Delicious.font.js"></script><![endif]-->
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
@@ -32,18 +33,20 @@
   <link rel="stylesheet" href="css/index.css">
   <link href='http://fonts.googleapis.com/css?family=Plaster' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Engagement' rel='stylesheet' type='text/css'>
+   <div class="col-sm-4">
   <div style="position:relative;width:420px;float:left;" id="canvas-wrapper">
     <div id="canvas-controls">
     </div>
     <output id="list"></output>
     <canvas id="canvas" width="417.5" height="562.5"></canvas>
   </div>
+</div>
+ <div class="col-sm-4">
   <div id="commands" ng-click="maybeLoadShape($event)">
     <ul class="nav nav-tabs">
       <li class="active"><a href="kitchensink2.htm#simple-shapes" data-toggle="tab">Elements</a></li>
       <li><a href="kitchensink2.htm#object-controls-pane" data-toggle="tab">Controls</a></li>
     </ul>
-  </br>
     <div class="tab-content">
       <div class="tab-pane active" id="simple-shapes">
         <p>Add <strong>simple shapes</strong> to canvas:</p>
@@ -187,7 +190,9 @@
           </div>
         </div>
       </div>
-
+    </div>
+    </div>
+      <div class="col-sm-4">
       <div id="color-opacity-controls" ng-show="canvas.getActiveObject()">
         <label for="opacity">Opacity: </label>
         <input value="100" type="range" bind-value-to="opacity">
@@ -270,6 +275,9 @@
       <script src="js/app_config.js"></script>
       <script src="js/controller.js"></script>
     </div>
+  </div>
+</div>
+</div>
     <!-- 5eme bloc -->
         <script>
         document.getElementById('imgLoader').onchange = function handleImage(e) {

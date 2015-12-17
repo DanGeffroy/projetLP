@@ -20,3 +20,10 @@
 .btn{
   margin-bottom: 3px;
 }
+
+.canvas-container {
+    border: 1px dotted #ccc;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
