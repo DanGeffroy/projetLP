@@ -1,0 +1,75 @@
+body {
+
+  padding-top: 10px;
+
+}
+
+[class*="col-"], footer {
+
+  /*background-color: lightgreen;*/
+
+  /*border: 2px solid black;*/
+
+  /*border-radius: 6px;*/
+
+  line-height: 40px;
+
+  text-align: center;
+
+}
+
+.container {
+
+  padding-right: 10px;
+
+  padding-left: 10px;
+
+  margin-right: auto;
+
+  margin-left: auto;
+
+}
+
+.active {
+color: #FFF;
+font-size: 15px;
+font-weight: bold;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+
+border-top: 1px solid grey;
+border-left: 1px solid grey;
+border-right: 1px solid grey;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9ECEF3", endColorstr="#083D65"); /* Pour IE
+seulement et mode gradient à linear */
+background-image: -webkit-gradient(linear, left top, left bottom, from(#9ECEF3), to(#083D65));
+background-image: -moz-linear-gradient(top center, #9ECEF3, #083D65);
+background-image: -o-linear-gradient(top, #9ECEF3, #083D65); /*uniquement en mode linear*/
+}
+
+.dropdown-menu {
+text-align:center;
+}
+
+li.dropdown{
+background: #F5F1F1 -moz-linear-gradient(center top , #F5F1F1, #E7E3E3) repeat scroll 0% 0%;
+font-size: 14px;
+font-weight: bold;
+color: #777;
+border: 1px solid grey;
+}
+
+button.btn.btn-default{
+color: #777;
+background-color:#F5F1F1;
+}
+a.dropdown-toggle{
+color: #777;
+}
+
+a.slogan{
+text-decoration:none;
+font-size: x-large;
+color: black;
+color: #999;
+}
