@@ -41,7 +41,7 @@
 .btn-primary:focus,
 .btn-primary.focus {
   color: #fff;
-  background-color: #173854;
+  background: #173854;
   border-color: #173854;
 }
 .btn-primary:hover {
@@ -58,7 +58,7 @@
 .btn-danger:focus,
 .btn-danger.focus {
   color: #fff;
-  background-color: #c9302c;
+  background: #c9302c;
   border-color: #761c19;
 }
 .btn-danger:hover {
@@ -80,8 +80,25 @@
 }
 .btn-success:hover {
   color: #fff;
-  background-color: #449d44;
+  background: #449d44;
   border-color: #398439;
+}
+.btn-info {
+  color: #fff;
+  background: #5bc0de;
+  background: linear-gradient( #5bc0de,#2999DC);
+  border-color: #46b8da;
+}
+.btn-info:focus,
+.btn-info.focus {
+  color: #fff;
+  background: #2999DC;
+  border-color: #1b6d85;
+}
+.btn-info:hover {
+  color: #fff;
+  background: #2999DC;
+  border-color: #269abc;
 }
 .barre{
   padding:0px;
