@@ -177,6 +177,12 @@
 							</div>
 						</div>
 					</div>
+          <div id="color-opacity-controls" ng-show="canvas.getActiveObject()">
+            <label for="opacity">Opacity: </label>
+            <input value="100" type="range" class="barre" bind-value-to="opacity">
+            <label for="color" style="margin-left:10px">Color: </label>
+            <input type="color" style="width:40px" class="btn btn-primary barre " bind-value-to="fill">
+          </div>
 				</div>
         <div class="col-sm-4">
 					<div  id="canvas-wrapper">
@@ -187,12 +193,7 @@
 					</div>
 				</div>
 				<div class="col-sm-4">
-					<div id="color-opacity-controls" ng-show="canvas.getActiveObject()">
-						<label for="opacity">Opacity: </label>
-						<input value="100" type="range" class="barre" bind-value-to="opacity">
-						<label for="color" style="margin-left:10px">Color: </label>
-						<input type="color" style="width:40px" class="btn btn-primary barre " bind-value-to="fill">
-					</div>
+
 					<div id="text-wrapper" style="margin-top: 10px" ng-show="getText()">
 						<textarea bind-value-to="text" style="width: 100%; height: 62px;"></textarea>
 						<div id="text-controls">
