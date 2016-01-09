@@ -83,29 +83,4 @@ function(){
       });
     })();
 
-    // 5 eme bloc
-    document.getElementById('imgLoader').onchange = function handleImage(e) {
-      var reader = new FileReader();
-      reader.onload = function (event) { console.log('fdsf');
-      var imgObj = new Image();
-      imgObj.src = event.target.result;
-      imgObj.onload = function () {
-        // start fabricJS stuff
-
-        var image = new fabric.Image(imgObj);
-        image.set({
-          left: 250,
-          top: 250,
-          angle: 20,
-          padding: 10,
-          cornersize: 10
-        });
-        //image.scale(getRandomNum(0.1, 0.25)).setCoords();
-        canvas.add(image);
-
-        // end fabricJS stuff
-      }
-
-    }
-    reader.readAsDataURL(e.target.files[0]);
-  }
+    
