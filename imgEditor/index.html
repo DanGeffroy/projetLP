@@ -165,7 +165,7 @@
 				</div>
 				<div class="panel-body">
 					<label for="drawing-mode-selector">Mode:</label>
-					<select id="drawing-mode-selector" bind-value-to="drawingMode">
+					<select id="drawing-mode-selector" bind-value-to="drawingMode" class="btn btn-default btn-object-action">
 						<option>Pencil</option>
 						<option>Circle</option>
 						<option>Spray</option>
@@ -178,13 +178,13 @@
 					</select>
 					<br>
 					<label for="drawing-line-width">Line width:</label>
-					<input type="range" value="30" min="0" max="150" bind-value-to="drawingLineWidth">
+					<input type="range" value="30" min="0" max="150" bind-value-to="drawingLineWidth" class="btn">
 					<br>
 					<label for="drawing-color">Line color:</label>
-					<input type="color" value="#005E7A" bind-value-to="drawingLineColor">
+					<input type="color" value="#005E7A" bind-value-to="drawingLineColor" class="btn btn-primary barre ">
 					<br>
 					<label for="drawing-shadow-width">Line shadow width:</label>
-					<input type="range" value="0" min="0" max="50" bind-value-to="drawingLineShadowWidth">
+					<input type="range" value="0" min="0" max="50" bind-value-to="drawingLineShadowWidth" class="btn ">
 				</div>
 			</div>
 		</div>
@@ -197,7 +197,7 @@
 					<textarea bind-value-to="text" style="width: 100%; height: 62px;"></textarea>
 					<div id="text-controls">
 						<label for="font-family" style="display:inline-block">Font family:</label>
-						<select id="font-family" class="btn btn-primary btn-object-action" bind-value-to="fontFamily">
+						<select id="font-family" class="btn btn-default btn-object-action" bind-value-to="fontFamily">
 							<option value="arial">Arial</option>
 							<option value="helvetica" selected>Helvetica</option>
 							<option value="myriad pro">Myriad Pro</option>
@@ -215,7 +215,7 @@
 						</select>
 						<br>
 						<label for="text-align" style="display:inline-block">Text align:</label>
-						<select id="text-align" class="btn btn-primary btn-object-action" bind-value-to="textAlign">
+						<select id="text-align" class="btn btn-default btn-object-action" bind-value-to="textAlign">
 							<option><span class="glyphicon glyphicon-align-left"></span>Left</option>
 							<option><span class="glyphicon glyphicon-align-center"></span>Center</option>
 							<option><span class="glyphicon glyphicon-align-right"></span>Right</option>
@@ -243,19 +243,19 @@
 						</div>
 					</div>
 					<div id="text-controls-additional">
-						<button type="button" class="btn btn-primary  btn-object-action" ng-click="toggleBold()" ng-class="{'btn-inverse': isBold()}">
+						<button type="button" class="btn btn-object-action" ng-click="toggleBold()" ng-class="{'btn-inverse': isBold()}">
 							Bold
 						</button>
-						<button type="button" class="btn btn-primary  btn-object-action" id="text-cmd-italic" ng-click="toggleItalic()" ng-class="{'btn-inverse': isItalic()}">
+						<button type="button" class="btn btn-object-action" id="text-cmd-italic" ng-click="toggleItalic()" ng-class="{'btn-inverse': isItalic()}">
 							Italic
 						</button>
-						<button type="button" class="btn btn-primary  btn-object-action" id="text-cmd-underline" ng-click="toggleUnderline()" ng-class="{'btn-inverse': isUnderline()}">
+						<button type="button" class="btn btn-object-action" id="text-cmd-underline" ng-click="toggleUnderline()" ng-class="{'btn-inverse': isUnderline()}">
 							Underline
 						</button>
-						<button type="button" class="btn btn-primary  btn-object-action" id="text-cmd-linethrough" ng-click="toggleLinethrough()" ng-class="{'btn-inverse': isLinethrough()}">
+						<button type="button" class="btn btn-object-action" id="text-cmd-linethrough" ng-click="toggleLinethrough()" ng-class="{'btn-inverse': isLinethrough()}">
 							Linethrough
 						</button>
-						<button type="button" class="btn btn-primary  btn-object-action" id="text-cmd-overline" ng-click="toggleOverline()" ng-class="{'btn-inverse': isOverline()}">
+						<button type="button" class="btn btn-object-action" id="text-cmd-overline" ng-click="toggleOverline()" ng-class="{'btn-inverse': isOverline()}">
 							Overline
 						</button>
 					</div>
