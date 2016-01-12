@@ -1,4 +1,3 @@
-
 // 1er bloc
 function draw(ev) {
       console.log(ev);
@@ -82,5 +81,3 @@ function(){
         }
       });
     })();
-
-    
