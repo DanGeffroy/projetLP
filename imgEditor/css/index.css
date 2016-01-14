@@ -43,7 +43,6 @@ h1 {
   vertical-align: top;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
 .btn-danger {
   color: #fff;
   background: #d9534f;
@@ -120,4 +119,20 @@ select {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.open > .dropdown-menu {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  opacity: 1;
+}
+.dropdown-menu {
+  opacity: .3;
+  -webkit-transform-origin: top;
+  transform-origin: top;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-transform: scale(1, 0);
+  display: block;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
 }
