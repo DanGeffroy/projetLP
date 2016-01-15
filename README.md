@@ -7,3 +7,8 @@ We must  Remake the commande page and make an image editor for the products.
 We will probably use boostrap for the view and js/ jquerry for the client part, For the image editor we are seeking a great lib that will simplify the jobs.
 
 ![alt tag](https://s-media-cache-ak0.pinimg.com/originals/5d/69/c9/5d69c9af60d85805a0d2d6989d86a5d3.gif)
+## Progress
+### Image editor:
+currently we have a stable version and a functional mobile version.
+Here is a screenshot of the application
+![alt tag](http://i.imgur.com/DCKGd9t.png?1)
