@@ -110,11 +110,11 @@ select {
 }
 #canvas-wrapper {
   text-align: center;
-}
+}/*
 .dropdown-menu {
   text-align: center;
-}
-.dropdown-menu .btn-default {
+}*/
+/*.dropdown-menu .btn-default {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -135,4 +135,4 @@ select {
   display: block;
   transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
-}
+}*/
