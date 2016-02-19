@@ -1,4 +1,5 @@
 // ADD SLIDEDOWN ANIMATION TO DROPDOWN //
+
  $('.dropdown').on('show.bs.dropdown', function(e){
    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
  });
@@ -288,6 +289,21 @@ function addAccessors($scope) {
   };
   $scope.rasterizeJSON = function() {
     alert(JSON.stringify(canvas));
+  };
+  $scope.rasterizeSave = function() {
+    canvas.freeDrawingMode;
+    var photo = canvas.toDataURL ( 'png' );
+
+    $.ajax ({
+      type: "POST",
+      url :  'php/photo_upload.php',
+      data :  { 
+        photo : photo
+      },
+      success : function(){
+      	alert("redirecte vers le site")
+      }
+    });
   };
   $scope.getSelected = function() {
     return canvas.getActiveObject();
