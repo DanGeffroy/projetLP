@@ -24,7 +24,7 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<ul class="nav nav-tabs">
-                            <li role="presentation" class="active"><a href="accueil.php">Accueil</a></li>
+                            <li role="presentation" class="active"><a href="index.php">Accueil</a></li>
 					  		<li role="presentation" class="dropdown">
 					   		    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 					      		Service Express <span class="caret"></span>
