@@ -2,7 +2,6 @@ body {
 
   padding-top: 10px;
 font-family:arial;
-
 }
 
 [class*="col-"], footer {
@@ -13,7 +12,7 @@ font-family:arial;
 
   /*border-radius: 6px;*/
 
-  line-height: 40px;
+  line-height: 20px;
 
   text-align: center;
 
@@ -59,10 +58,16 @@ color: #777;
 /*border: 1px solid grey;*/
 }
 
+a.btn.btn-primary{
+color: #777;
+background-color:#F5F1F1;
+}
+
 button.btn.btn-default{
 color: #777;
 background-color:#F5F1F1;
 }
+
 a.dropdown-toggle{
 color: #777;
 }
@@ -75,7 +80,7 @@ color: #999;
 }
 
 h2 {
- border-bottom:1px dashed darkgrey;
+ border-bottom:1px dashed #E0A158;
 text-align:left;
  }
 
@@ -84,7 +89,35 @@ margin-bottom: 10px;
 }
 
 footer {
-	margin-top: 50px;
-	padding: 10px 0px 10px 0px;
-	background-color: darkgrey;
+ margin-top: 50px;
+ padding: 10px 0px 10px 0px;
+font-style:normal;
+color: #666666;
+font-style:underline;
+border-top:1px dashed #E0A158;
+}
+
+#desc, #comm, #form, #client, #nonCli, #panier{
+text-align: left;
+font-style: normal;
+}
+
+#list{
+text-align: left;
+}
+
+figure {
+    display: inline-block;
+    margin: 10px;
+ display: inline-block;
+ vertical-align: top;
+}
+
+figure figcaption{
+text-align: center;
+color: #666666;
+}
+
+a {
+color: #666666;
 }

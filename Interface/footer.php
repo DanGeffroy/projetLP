@@ -5,66 +5,83 @@
 				<span class="avis"></span>
 			</div>
 			<footer class="row">
-				<div class="col-xs-offset-3 col-xs-3">
+				<div class="col-xs-3">
+					<img src="img/Logo_imprimvert.jpg" />
+					<img src="img/PEFC.jpg" />
+					<img src="img/FSC.jpg" />
+					<img src="img/ISO9001s.jpg" />
+					<img src="img/ISO14001s.jpg" />
+				</div>
+				<div class="col-xs-2">
 					<section class="blocs_footer">
-						<p>Impression Direct</p>
+						<h4>Impression Direct</h4>
 						<ul class="list-unstyled">
 							<li>
-								<a href="services">Impression Direct</a>
+								<a href="#">Impression Direct</a>
 							</li>
 							<li>
-								<a href="services">L'entreprise</a>
+								<a href="#">L'entreprise</a>
 							</li>
 							<li>
-								<a href="machines">Machines</a>
+								<a href="#">Machines</a>
 							</li>
 							<li>
-								<a href="catalogue_p.pdf">Télécharger notre catalogue</a>
+								<a href="#">Télécharger notre catalogue</a>
 							</li>
 						</ul>
 					</section>
 				</div>
 				<div class="col-xs-3">
 					<section class="blocs_footer">
-						<p>Nos engagements</p>
+						<h4>Nos engagements</h4>
 						<ul class="list-unstyled">
 							<li>
-								<a href="conditions_de_vente">Conditions générales de vente</a>
+								<a href="#">Conditions générales de vente</a>
 							</li>
 							<li>
-								<a href="nos_gabarits">Nos gabarits à télécharger</a>
+								<a href="#">Nos gabarits à télécharger</a>
 							</li>
 							<li>
-								<a href="processus_de_fabrication">Processus de fabrication</a>
+								<a href="#">Processus de fabrication</a>
 							</li>
 							<li>
-								<a href="contraintes_techniques">Contraintes techniques</a>
+								<a href="#">Contraintes techniques</a>
 							</li>
 							<li>
-								<a href="controle_couleur">Contrôle couleur</a>
+								<a href="#">Contrôle couleur</a>
 							</li>
 						</ul>
 					</section>
 				</div>
-				<div class="col-xs-3">
+				<div class="col-xs-2">
 					<section class="blocs_footer">
-						<p>Aides et services</p>
+						<h4>Aides et services</h4>
 						<ul class="list-unstyled">
 							<li>
-								<a href="communication">Mon espace client</a>
+								<a href="#">Mon espace client</a>
 							</li>
 							<li>
-								<a href="coordonnees">Nos coordonnées</a>
+								<a href="#">Nos coordonnées</a>
 							</li>
 							<!-- Meme liens que celui au dessus  à priori -->
 							<li>
-								<a href="contacts">Nous contacter</a>
+								<a href="#">Nous contacter</a>
 							</li>
 							<li>
-								<a href="plan">Plan du site</a>
+								<a href="#">Plan du site</a>
 							</li>
 						</ul>
 					</section>
+				</div>
+				<div class="col-xs-2">
+					<img src="img/numero_vert.png" />
+					<a href="http://www.facebook.com/impressiondirect" target="_blank">
+ 						<img src="img/bouton_facebook.png" alt="facebook"/>
+ 					</a>
+					<a target="_blank" href="http://www.skype.com/intl/fr/welcomeback/">
+    					<img src="img/bouton_skype.png" alt="facebook"/>
+					</a>
+					<p>Contact : impressiondirect</p>
 				</div>
 			</footer>
 		</div>
