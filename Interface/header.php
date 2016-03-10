@@ -16,7 +16,7 @@
 
 					<div class="col-xs-offset-5 col-xs-4">
 						<a class="btn btn-primary" href="espaceCliForm.php" role="button"> <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Espace Client </a>
-						<a class="btn btn-primary" href="#" role="button"> <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Mon Panier </a>
+						<a class="btn btn-primary" href="panier.php" role="button"> <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Mon Panier </a>
 					</div>
 
 				</div>
@@ -30,10 +30,10 @@
 					      		Service Express <span class="caret"></span>
 					    		</a>
 					    	    <ul class="dropdown-menu">
-							        <li><a class="test" href="produit.php?nom=Carte de visite Express">Carte de Visite Express</a></li>
-							        <li><a href="produit.php?nom=Catalogues">Catalogues</a></li>
-							        <li><a href="produit.php?nom=Flyer">Flyers</a></li>
-							        <li><a href="produit.php?nom=Signalétique">Signalétique</a></li>
+							        <li><a class="test" href="produit.php?nom=Cartes de visite Express&cat=Services Express">Cartes de Visite Express</a></li>
+							        <li><a href="produit.php?nom=Catalogues&cat=Services Express">Catalogues</a></li>
+							        <li><a href="produit.php?nom=Flyer&cat=Services Express">Flyer</a></li>
+							        <li><a href="produit.php?nom=Signalétique&cat=Services Express">Signalétique</a></li>
 						        </ul>
                             </li>
                             <li role="presentation" class="dropdown">
@@ -41,11 +41,11 @@
 					      		Offre Noël <span class="caret"></span>
 					    		</a>
 					    	    <ul class="dropdown-menu">
-							        <li><a href="produit.php?nom=Calendriers inscriptibles">Calendriers inscriptibles</a></li>
-						            <li><a href="produit.php?nom=Calendriers Multipages">Calendriers Multipages</a></li>
-						            <li><a href="produit.php?nom=Calendriers Tentes">Calendriers Tentes</a></li>
-							        <li><a href="produit.php?nom=Cartes calendriers">Cartes calendriers</a></li>
-							        <li><a href="produit.php?nom=Cartes de voeux A4 A5">Cartes de voeux A4 A5</a></li>
+							        <li><a href="produit.php?nom=Calendriers inscriptibles&cat=Offres noël">Calendriers inscriptibles</a></li>
+						            <li><a href="produit.php?nom=Calendriers Multipages&cat=Offres noël">Calendriers Multipages</a></li>
+						            <li><a href="produit.php?nom=Calendriers Tentes&cat=Offres noël">Calendriers Tentes</a></li>
+							        <li><a href="produit.php?nom=Cartes calendriers&cat=Offres noël">Cartes calendriers</a></li>
+							        <li><a href="produit.php?nom=Cartes de voeux A4 A5&cat=Offres noël">Cartes de voeux A4 A5</a></li>
 						        </ul>
 					        </li>
                             <li role="presentation" class="dropdown">
@@ -53,7 +53,7 @@
 					      		Produits <span class="caret"></span>
 					    		</a>
 					    	    <ul class="dropdown-menu">
-						            <li><a href="produit.php?nom=Produit">...</a></li>
+						            <li><a href="listProd.php">Voir les produits</a></li>
 						        </ul>
 					        </li>
                             <li role="presentation" class="dropdown">
@@ -61,8 +61,8 @@
 					      		CD / DVD <span class="caret"></span>
 					    		</a>
 					    	    <ul class="dropdown-menu">
-						            <li><a href="produit.php?nom=Jaqutte">Jaquettes</a></li>
-						            <li><a href="produit.php?nom=Pochette">Pochettes</a></li>
+						            <li><a href="produit.php?nom=Jaquettes&cat=CD / DVD">Jaquettes</a></li>
+						            <li><a href="produit.php?nom=Pochettes&cat=CD / DVD">Pochettes</a></li>
 						        </ul>
 					        </li>
                             <li role="presentation" class="dropdown">
@@ -70,10 +70,10 @@
 					      		Autres produits <span class="caret"></span>
 					    		</a>
 					    	    <ul class="dropdown-menu">
-						            <li><a href="produit.php?nom=Autres produits">Autres produits</a></li>
-						            <li><a href="produit.php?nom=Conception graphique">Conception graphique</a></li>
-						            <li><a href="produit.php?nom=Effets photos">Effets photos</a></li>
-							        <li><a href="produit.php?nom=Options">Options</a></li>
+						            <li><a href="produit.php?nom=Autres produits&cat=Autres produits">Autres produits</a></li>
+						            <li><a href="produit.php?nom=Conception graphique&cat=Autres produits">Conception graphique</a></li>
+						            <li><a href="produit.php?nom=Effets photos&cat=Autres produits">Effets photos</a></li>
+							        <li><a href="produit.php?nom=Options&cat=Autres produits">Options</a></li>
 						        </ul>
 					        </li>
                             <li role="presentation" class="dropdown">
@@ -81,8 +81,8 @@
 					      		Services internet <span class="caret"></span>
 					    		</a>
 					    	    <ul class="dropdown-menu">
-						            <li><a href="produit.php?nom=Pack Mails">Pack Mails</a></li>
-						            <li><a href="produit.php?nom=Site Web">Site Web</a></li>
+						            <li><a href="produit.php?nom=Packs Mails&cat=Services internet">Packs Mails</a></li>
+						            <li><a href="produit.php?nom=Sites Web&cat=Services internet">Sites Web</a></li>
 						        </ul>
 					        </li>
 					    </ul>
