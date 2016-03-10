@@ -222,7 +222,7 @@ function addAccessors($scope) {
     }));
   };
   $scope.addText = function() {
-    var textSample = new fabric.Text('New Text', {
+    var textSample = new fabric.Text('Mon Texte', {
       left: getRandomInt(0, 200),
       top: getRandomInt(0, 100),
       fontFamily: 'helvetica',
@@ -272,7 +272,7 @@ function addAccessors($scope) {
     });
   }
   $scope.confirmClear = function() {
-    if (confirm('Are you sure?')) {
+    if (confirm('Etes vous sur de nettoyer la toile?')) {
       canvas.clear();
     }
   };
@@ -293,18 +293,33 @@ function addAccessors($scope) {
   $scope.rasterizeSave = function() {
     canvas.freeDrawingMode;
     var photo = canvas.toDataURL ( 'png' );
+    var numCommande = getParameterByName('numCommande');
+    var nomCarte = getParameterByName('nomCarte');
+    var nomProduit = getParameterByName('nomProduit');
 
     $.ajax ({
       type: "POST",
       url :  'php/photo_upload.php',
       data :  { 
-        photo : photo
+        photo : photo,
+        numCommande : numCommande,
+        nomCarte : nomCarte,
+        nomProduit : nomProduit
       },
       success : function(){
-      	alert("redirecte vers le site")
+      	window.history.back();
       }
     });
   };
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
   $scope.getSelected = function() {
     return canvas.getActiveObject();
   };

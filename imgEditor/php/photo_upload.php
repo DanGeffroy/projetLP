@@ -1,7 +1,8 @@
 <?php
 
-	$numCommande = "leNumDeCommande";
-	$nomImage = time();
+	$numCommande = $_POST ['numCommande'];
+	$nomImage = $_POST ['nomCarte'];
+	$nomProduit = $_POST ['nomProduit'];
 	$localisation = "../commandes";
 
 	mkdir($localisation);
@@ -12,12 +13,13 @@
 	$data = base64_decode ( $data );
 
 	mkdir($localisation."/".$numCommande);
+	mkdir($localisation."/".$numCommande."/".$nomProduit);
 
-	$name = $localisation."/".$numCommande."/".$nomImage.'.png';
+	$name = $localisation."/".$numCommande."/".$nomProduit."/".$nomImage.'.png';
 	
 	file_put_contents($name, $data);
 
-	$deformOK = fctdeformimage(815,1122,'','','../commandes/'.$numCommande."/",$nomImage.'.png');
+	$deformOK = fctdeformimage(815,1122,'','',$localisation."/".$numCommande."/".$nomProduit."/",$nomImage.'.png');
 	if ($deformOK == 1) { 
 		return error_reporting(); 
 	}else{

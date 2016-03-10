@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Impression direct</title>
+</head>
+<body>
+	<form Method='Get' Action="index.html">
+	<table border=1px>
+		<tr>
+			<td>
+				Numero de commande : 
+			</td>
+			<td>
+				<input type="text" id="numCommande" name="numCommande"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Identifiant du produit : 
+			</td>
+			<td>
+				<input type="text" id="nomProduit" name="nomProduit"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Nom de la carte : 
+			</td>
+			<td>
+				<input type="text" id="nomCarte" name="nomCarte"/>
+			</td>
+		</tr>
+	</table>
+		<input type="submit" value="Créé la carte"/>
+	</form>
+	<br>
+	<form Method='Post' Action="php/suppCommande.php">
+		<table border=1px>
+			<tr>
+				<td>
+					Numero de commande à supprimer : 
+				</td>
+				<td>
+					<input type="text" id="numCommandeDelete" name="numCommandeDelete"/>
+				</td>
+			</tr>
+		</table>
+		<input type="submit" value="Annuler la commande"/>
+	</form>
+	<br>
+	<form Method='Post' Action="php/suppProduit.php">
+		<table border=1px>
+			<tr>
+				<td>
+					Numero de commande :
+				</td>
+				<td>
+					<input type="text" id="numCommandeP" name="numCommandeP"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Identifiant du produit a supprimer :
+				</td>
+				<td>
+					<input type="text" id="idProduit" name="idProduit"/>
+				</td>
+			</tr>
+		</table>
+		<input type="submit" value="Supprimer le produit"/>
+	</form>
+</body>
+</html>
